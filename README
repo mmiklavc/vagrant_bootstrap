@@ -9,3 +9,4 @@ Sets up artifacts
 .vimrc
 .ssh - you will need to add this to the root Vagrant project folder yourself
 bootstrap.sh - sets up various tools necessary for HDP. See script for more details.
+hosts - modify to your preference
