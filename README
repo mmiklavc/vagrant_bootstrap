@@ -1,0 +1,11 @@
+Vagrant setup for bootstrapping an HDP installation
+
+First I recommend that you install Sahara plugin for Vagrant - take a snapshot once you've configured HDP. Restarting the servers ends up causing problems with HDFS and you'll have to manually reformat.
+vagrant plugin install sahara
+
+Sets up artifacts
+----------
+.bashrc
+.vimrc
+.ssh - you will need to add this to the root Vagrant project folder yourself
+bootstrap.sh - sets up various tools necessary for HDP. See script for more details.
