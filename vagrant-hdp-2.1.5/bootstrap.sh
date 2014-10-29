@@ -5,6 +5,15 @@ sudo yum -y update
 sudo yum -y install redhat-lsb vim java-1.7.0-openjdk-devel.x86_64 mlocate ntp ntpdate ntp-doc
 echo 'Done installs'
 
+echo "Installing Maven"
+cd /tmp/
+wget http://apache.cs.utah.edu/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz
+tar zxvf apache-maven-3.2.3-bin.tar.gz -C /usr/local
+cd /usr/local
+ln -s apache-maven-3.2.3 maven
+cp /vagrant/maven.sh /etc/profile.d/
+echo "Done Maven"
+
 echo 'Updating mlocate db'
 updatedb
 echo 'Done mlocate'
